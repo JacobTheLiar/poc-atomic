@@ -1,0 +1,12 @@
+<div>
+    @for (item of items(); track item.id) {
+        <app-todo-item
+                [description]="item.description"
+                [isDone]="item.isDone"
+                (delete)="delete.emit(item)"
+                (toggle)="toggle.emit(item)">
+        </app-todo-item>
+    } @empty {
+        <span>- no items -</span>
+    }
+</div>

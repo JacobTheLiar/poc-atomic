@@ -1,0 +1,11 @@
+<app-page-template [title]="pageTitle">
+    <app-button label="Add Todo" (click)="openAddModal()"></app-button>
+    <app-todo-list [items]="todos()" (delete)="deleteTodo($event)" (toggle)="toggleTodoStatus($event)"></app-todo-list>
+
+    @if(isAddModalOpen()) {
+        <app-add-todo-modal
+                (add)="addTodo($event)"
+                (cancel)="closeAddModal()">
+        </app-add-todo-modal>
+    }
+</app-page-template>

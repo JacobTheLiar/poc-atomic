@@ -1,0 +1,8 @@
+<div class="modal">
+    <form [formGroup]="todoForm" (ngSubmit)="onAddEvent()">
+        <app-text-input placeholder="New todo description"
+                        controlName="description"></app-text-input>
+        <app-button label="Add" [disabled]="todoForm.invalid"></app-button>
+        <app-button label="Cancel" (click)="onCancelEvent()"></app-button>
+    </form>
+</div>

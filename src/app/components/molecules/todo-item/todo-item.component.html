@@ -1,0 +1,5 @@
+<div class="todo-item">
+    <app-button [label]="status()" (click)="toggle.emit()"></app-button>
+    <app-description [text]="description()"></app-description>
+    <app-button label="delete" (click)="delete.emit()"></app-button>
+</div>
